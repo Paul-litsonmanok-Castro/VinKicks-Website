@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@1,900&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+html, body {
+    background-color: rgb(217, 217, 217);
+    margin: 0;
+    padding: 0;
+}
+
+.upper-most {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+}
+
+.Title,
+.Logo,
+.Sign-Log {
+    display: flex;
+}
+
+.Title {
+    font-family: 'Alegreya SC', serif;
+    font-size: 50px;
+    flex: 1;
+}
+
+.Logo { 
+    flex: 1;
+}
+
+.Sign-Log {
+    flex: 1;
+    justify-content: flex-end;
+    padding: 0px 2px 0px 0px;
+}
+
+.Sign-Log a {
+    text-decoration: none;
+    color: black;
+    padding: 0px 4px 0px 4px;
+}
+
+.Sign-Log a:hover {
+    background-color: rgba(80, 79, 79, 0.9);
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav a:hover {
+    background-color: rgba(80, 79, 79, 0.9);
+    color: white;
+}
+
+.nav {
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    text-align: center;
+}
+
+.nav-links {
+    display:flex;
+    justify-content: space-around;
+    font-size: 2em;
+}
+
+
+.main-body {
+    padding: .3em;
+}
+
+.content-container {
+    display: flex; 
+    justify-content: space-between;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
+
+.home-text {
+    font-weight: bold;
+}
