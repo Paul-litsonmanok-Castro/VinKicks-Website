@@ -16,3 +16,7 @@ nav {
     padding: 2em;
 }
 
+.presentation {
+    display: flex;
+}
+
