@@ -77,6 +77,7 @@ body {
     overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    z-index: 9;
 }
 
 .sidebar::-webkit-scrollbar {
@@ -85,9 +86,11 @@ body {
 
 .sidebar img {
     width: 35px;
+    z-index: 10;
 }
 
 .sidebar-container {
+    z-index: 10;
     margin-top: 60px;
     min-height: 800px;
     display: flex;
@@ -116,29 +119,104 @@ body {
     margin-bottom: 20px;
 }
 
-/*
+/* Product Images */
+.carousel-container {
+  
+    position: fixed;
+    left: 160px;
+    top: 160px;
 
-.search-icon {
-    width: 35px;
-    display: block;
-    margin: 150px auto 0;
+    width: 90%;
+    height: 83%;
+    margin: auto;
+    overflow: hidden;
+    border: solid black;
+
 }
 
-
-.social-links img {
-    width: 35px;
-    display: block;
-    margin: 40px auto 40px;
+.carousel-container#blur.active {
+    filter: blur(20px);
 }
 
-.social-links {
-    margin-top: 100px;
+.carousel-slide {
+    display: flex;
+}
+
+.carousel-container .carousel-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    display:block;
+}
+
+#PrevBtn{
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    left: 5%;
+    width: 10%;
+    cursor: pointer;
+}
+
+#NextBtn{
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    right: 5%;
+    width: 10%;
+    cursor: pointer;
+}
+
+/* Login Forms */
+form {
+    z-index: 10 ;
+    border: 2px solid black;
     padding: 10px;
 }
 
+input[type=text], input[type=password], button[type=submit] {
 
-*/
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 5px 0 5px 0;
 
+}
+
+#popup {
+    position: fixed;
+    top: 20%;
+    left: 25%;
+    transform: translate(-50%,-50%)
+    width: 10px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0,0,0,.30);
+    background: grey;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#popup.active {
+    top: 30%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+@media (max-height: 1030px) {
+    .carousel-container {
+        height: 80%;
+    }
+
+}
+
+@media (max-height: 700px) {
+    .carousel-container {
+        height: 50%;
+    }
+
+}
 
 @media (max-width: 1500px) {
     .nav-links {
@@ -213,7 +291,7 @@ body {
         display: none;
     }
 
-    .sidebar-container {
+    .carousel-container {
         margin-top: 0px;
         flex-direction: row;
         min-height: 50px;
@@ -221,7 +299,7 @@ body {
 
     .social-links {
         flex-direction: row;
-        padding: 0 20px 0 20px;
+        padding: 0 0px 0 0px;
     }
 
     .social-links img {
@@ -230,9 +308,86 @@ body {
 
     .sidebar.active {
         display: block;
+        z-index: 10;
+    }
+
+    .carousel-container {
+        position: fixed;
+        left: 30px;     
+        top: 170px;
+        
+        width: 95%;
+        height: 75%;
     }
 
 }
+
+@media (max-width: 1680px) {
+    .carousel-container {
+        width: 87%;
+    }   
+}
+
+@media (max-width: 1460px) {
+    .carousel-container {
+        width: 85%;
+    }   
+}
+
+@media (max-width: 1120px) {
+    .carousel-container {
+        width: 79%;
+    }   
+}
+
+@media (max-width: 960px) {
+    .carousel-container {
+        width: 75%;
+    }   
+}
+
+@media (max-width: 820px) {
+    .carousel-container {
+        width: 70%;
+    }   
+}
+
+@media (max-width: 680px) {
+    .carousel-container {
+        width: 68%;
+    }   
+}
+
+@media (max-width: 620px) {
+    .carousel-container {
+        width: 62%;
+    }   
+}
+
+@media (max-height: 815px) and (max-width: 1680px) {
+    .carousel-container {
+        width: 95%;
+    }
+}
+
+@media (max-height: 815px) and (max-width: 1310px) {
+    .carousel-container {
+        width: 92%;
+    }
+}
+
+@media (max-height: 815px) and (max-width: 795px) {
+    .carousel-container {
+        width: 88%;
+    }
+}
+
+@media (max-height: 815px) and (max-width: 510px) {
+    .carousel-container {
+        width: 85%;
+    }
+}
+
 
 
 
